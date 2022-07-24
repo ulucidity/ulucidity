@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+=====================================================================
+=== Copyright (c) 1988-2022 $organization$
+===
+=== This software is provided by the author and contributors ``as is'' 
+=== and any express or implied warranties, including, but not limited to, 
+=== the implied warranties of merchantability and fitness for a particular 
+=== purpose are disclaimed. In no event shall the author or contributors 
+=== be liable for any direct, indirect, incidental, special, exemplary, 
+=== or consequential damages (including, but not limited to, procurement 
+=== of substitute goods or services; loss of use, data, or profits; or 
+=== business interruption) however caused and on any theory of liability, 
+=== whether in contract, strict liability, or tort (including negligence 
+=== or otherwise) arising in any way out of the use of this software, 
+=== even if advised of the possibility of such damage.
+===
+===   File: Ulucidity-create-cxx-main-form.html
+===
+=== Author: $author$
+===   Date: 6/10/2022
+=====================================================================
+=== Application=Ulucidity Part=create-cxx-main-form
+-->
+
+<!--
+=====================================================================
+=== form
+=====================================================================
+-->
+<form name="Form" method="POST" action="/ulucidity/templates/t/cxx-main/cxx-main.cxx-main"
+ onSubmit="return setFormSubmit(getFormValue2('FormTemplate','FormAction','Form'),getFormValue('FormMethod','Form'),'Form')">
+    <div class="form">
+
+    File: <input name="File" value=""></input>[{ main_opt | main }][.hpp]
+    <input type="radio" name="Extension" value="hpp" checked="checked">.hpp</input>
+    <input type="radio" name="Extension" value="cpp" unchecked="checked">.cpp</input>
+    <input type="radio" name="Extension" value="hxx" unchecked="checked">.hxx</input>
+    <input type="radio" name="Extension" value="cxx" unchecked="checked">.cxx</input>
+    <input type="radio" name="Extension" value="h" unchecked="checked">.h</input>
+    <input type="radio" name="Extension" value="c" unchecked="checked">.c</input>
+    <input type="radio" name="Extension" value="" unchecked="checked">no</input>
+    <input type="checkbox" name="is_File" value="no" unchecked="checked">no</input>
+    <br/>
+
+    Template: <select name="FormTemplate">
+    <option value="/ulucidity/templates/t/cxx/main_opt-hxx-cxx.t">c++ main_opt class .hxx/.cxx (/ulucidity/templates/t/cxx/main_opt-hxx-cxx.t)</option>
+    <option value="/ulucidity/templates/t/cxx/main-hxx-cxx.t">c++ main class .hxx/.cxx (/ulucidity/templates/t/cxx/main-hxx-cxx.t)</option>
+    <option value=""></option>
+    <option value="/ulucidity/templates/t/t/parameters.t">t parameters &nbsp;&nbsp; (/ulucidity/templates/t/t/parameters.t)</option>
+    <option value="/ulucidity/templates/t/t/functions.t">t functions &nbsp;&nbsp; (/ulucidity/templates/t/t/functions.t)</option>
+    <option value=""></option>
+    <option value="/ulucidity-cgi/cgi">cgi parameters &nbsp;&nbsp; (/ulucidity-cgi/cgi)</option>
+    <option value="/ulucidity-cgi/cgicatch">catch cgi parameters &nbsp;&nbsp; (/ulucidity-cgi/cgicatch)</option>
+    <option value=""/>
+    </select>
+    <br/>
+
+    <br/>
+    <b>namespace </b><input name="Framework" value=""></input><b>%Framework%[xos] {</b>
+    <b></b><input type="checkbox" name="is_Framework" value="no" unchecked="checked">no</input><b></b>
+    <br/>
+
+    <b>namespace </b><input name="Application" value=""></input><b>%Application%[app/console] {</b>
+    <b></b><input type="checkbox" name="is_Application" value="no" unchecked="checked">no</input><b></b>
+    <br/>
+
+    <b>namespace </b><input name="What" value=""></input><b>%What%[what] {</b>
+    <b></b><input type="checkbox" name="is_What" value="no" unchecked="checked">no</input><b></b>
+    <br/>
+
+    <br/>
+    <b>class </b><input name="Main" value=""></input><b>%Main%[main]</b><br/>
+    <b>: public </b><input name="Extends_namespace" value=""></input><b>[%Framework%::%Application%]::</b>
+    <b></b><input name="Extends" value=""></input><b>%Main%</b>
+    <b> {</b>
+    <b></b><input type="checkbox" name="is_Main" value="no" unchecked="checked">no</input><b></b>
+    <br/>
+    <b>&nbsp;&nbsp;&nbsp;&nbsp;%Main%(): </b><input name="Which" value=""></input>
+    <b>[default]</b>
+    <b></b><input type="checkbox" name="is_Which" value="no" checked="checked">no</input><b></b>
+    <b>_run(0)</b>
+    <b></b><input type="checkbox" name="Is_run" value="no" unchecked="checked">no</input><b> {}</b>
+    <br/>
+    <b>}; /// class %Main%</b>
+    <br/>
+
+    <b>} /// namespace %What%</b>
+    <br/>
+    <b>} /// namespace %Application%</b>
+    <br/>
+    <b>} /// namespace %Framework%</b>
+    <br/>
+
+    <br/>
+    Copyright:<input name="Genesis" size="10" value=""/>[1988]<b></b>
+    <input type="checkbox" name="is_Genesis" value="no" unchecked="checked">no</input>
+    <b>-</b><input name="Year" size="10" value=""/>[%year()%]<b></b>
+    <input type="checkbox" name="is_Year" value="no" unchecked="checked">no</input>
+    <b>&nbsp;&nbsp;</b>Organization:<input name="Organization" value=""></input>[$organization$]
+    <input type="checkbox" name="is_Organization" value="no" unchecked="checked">no</input>
+    <input type="checkbox" name="is_Copyright" value="no" unchecked="checked">no</input>
+    <br/>
+    Author:<input name="Author" value=""></input>[$author$]
+    <input type="checkbox" name="is_Author" value="no" unchecked="checked">no</input>
+    <b>&nbsp;&nbsp;</b>Date:<input name="Date" size="10" value=""/>[%date()%]<b></b>
+    <input type="checkbox" name="is_Date" value="no" unchecked="checked">no</input>
+    <b>&nbsp;&nbsp;</b><select name="Claims">
+    <option value=""></option>
+    <option value="as_is">``as is''</option>
+    <option value=""></option>
+    </select>[``as is'']
+    <input type="checkbox" name="is_Claims" value="no" unchecked="checked">no</input>
+    <br/>
+
+    <br/>
+    Content-Type: <select name="content_type">
+    <option value="text/plain">text</option>
+    <option value="text/html">html</option>
+    <option value="text/xml">xml</option>
+    <option value="application/json">json</option>
+    <option value="application/javascript">javascript</option>
+    <option value=""></option>
+    </select>
+    <br/>
+    Action: <select name="FormAction">
+    <option value="/ulucidity/templates/t/cxx-main/cxx-main.cxx-main">.cxx-main main (/ulucidity/templates/t/cxx-main/cxx-main.cxx-main)</option>
+    <option value=""></option>
+    <option value="/ulucidity/templates/t/t/parameters.t">t parameters &nbsp;&nbsp; (/ulucidity/templates/t/t/parameters.t)</option>
+    <option value="/ulucidity/templates/t/t/functions.t">t functions &nbsp;&nbsp; (/ulucidity/templates/t/t/functions.t)</option>
+    <option value=""></option>
+    <option value="/ulucidity-cgi/cgi">cgi parameters &nbsp;&nbsp; (/ulucidity-cgi/cgi)</option>
+    <option value="/ulucidity-cgi/cgicatch">catch cgi parameters &nbsp;&nbsp; (/ulucidity-cgi/cgicatch)</option>
+    <option value=""/>
+    </select>
+    <br/>
+    Method: <select name="FormMethod">
+    <option value="POST">POST</option>
+    <option value="GET">GET</option>
+    <option value=""></option>
+    </select>
+    <br/>
+    <br/>
+    <input type="submit" name="submit" value="submit"/><br/>
+    </div>
+</form>

@@ -1,0 +1,289 @@
+/*
+**********************************************************************
+** Copyright (c) 1988-2022 $organization$     
+**
+** This software is provided by the author and contributors ``as is'' 
+** and any express or implied warranties, including, but not limited to, 
+** the implied warranties of merchantability and fitness for a particular 
+** purpose are disclaimed. In no event shall the author or contributors 
+** be liable for any direct, indirect, incidental, special, exemplary, 
+** or consequential damages (including, but not limited to, procurement 
+** of substitute goods or services; loss of use, data, or profits; or 
+** business interruption) however caused and on any theory of liability, 
+** whether in contract, strict liability, or tort (including negligence 
+** or otherwise) arising in any way out of the use of this software, 
+** even if advised of the possibility of such damage.
+**
+**   File: Ulucidity-slideshow-header.css
+**
+** Author: $author$           
+**   Date: 6/5/2022
+**********************************************************************
+*/
+
+/*/
+/// header
+/// ...
+/*/
+.header {
+ width: 100%;
+ height: 64px;
+ padding: 0px;
+ border-spacing: 0px 0px;
+}
+.header td {
+ color: darkgray;
+ font-size: 34px;
+ white-space: nowrap;
+}
+
+/*/
+/// logo
+/// ...
+/*/
+.logo {
+ width: 64px;
+ text-align: center;
+}
+.icon {
+ width: 100%;
+ height: 100%;
+ padding: 0px;
+ border-spacing: 0px 0px;
+}
+.icon td {
+ background-image: url('../images/jpeg/ulucidity-logo.jpg');
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: 100% 100%;
+ border-radius: 10px;
+}
+.title {
+  text-align: left;
+}
+.label {
+ width: 100%;
+ padding: 0px;
+ border-spacing: 10px 10px;
+}
+.label a {
+ color: darkgray;
+ font-weight: normal;
+ text-decoration: none;
+}
+.label a:hover {
+ color: lightgray;
+ font-weight: normal;
+ text-decoration: none;
+}
+/*/
+/// ...
+/// logo
+/*/
+
+/*/
+/// dropdown
+/// ...
+/*/
+.dropdown-button {
+ width: 64px;
+ text-align: center;
+}
+.dropdown {
+ background-color:black;
+ border: none;
+ cursor: pointer;
+}
+.dropdown:hover, .dropdown:focus {
+ outline: none;
+}
+.dropdown:hover .dropdown-item, .dropdown:focus .dropdown-item {
+ background-color: lightgray;
+}
+.dropdown-item {
+ background-color: darkgray;
+ width: 32px;
+ height: 4px;
+ margin: 4px 0;
+}
+/*/
+/// dropdown content
+/// ...
+/*/
+.dropdown-content {
+ border-style:solid;
+ border-width:1px 1px 1px 1px;
+ border-radius:10px 10px 10px 10px;
+ border-color: gray;
+ background-color:lightgray;
+ color: black;
+ position: absolute;
+ min-width: 200px;
+ right: 0;
+ z-index:1;
+ display: none;
+}
+.dropdown-content a {
+ color: black;
+ padding: 12px 16px;
+ text-decoration: none;
+ font-weight: bolder;
+ font-size: 24px;  
+ display: block;
+}
+.dropdown-content a:hover {
+ color: black;
+ font-weight: bolder;
+ text-decoration: underline;
+}
+/*/
+/// ...
+/// dropdown content
+/*/
+/*/
+/// ...
+/// dropdown
+/*/
+
+/*/
+/// popdown
+/// ...
+/*/
+.popdown-button {
+ width: 64px;
+ text-align: center;
+}
+.popdown {
+ background-color:black;
+ border: none;
+ cursor: pointer;
+}
+.popdown:hover, .popdown:focus {
+ outline: none;
+}
+.popdown:hover .popdown-item, .popdown:focus .popdown-item {
+ background-color: lightgray;
+}
+.popdown-items {
+ width: 100%;
+ height: 100%;
+ margin: auto;
+ border: 0px;
+ border-style: solid;
+ border-color: lightgrey;
+ border-spacing: 4px 4px;
+}
+.popdown-item {
+ background-color: darkgray;
+ width: 4px;
+ height: 4px;
+ padding: 0px;
+}
+/*/
+/// popdown content
+/// ...
+/*/
+.popdown-content {
+ border-style:solid;
+ border-width:0px 0px 0px 0px;
+ border-radius:10px 10px 10px 10px;
+ border-color:black;
+ background-color:lightgrey;
+ color: darkgray;
+ position: absolute;
+ min-width: 200px;
+ right: 0;
+ z-index:1;
+ display: none;
+}
+.popdown-content a {
+ color: darkgray;
+ padding: 12px 16px;
+ text-decoration: none;
+ font-weight: bolder;
+ font-size: 24px;  
+ display: block;
+}
+.popdown-content a:hover {
+ color: lightgray;
+ font-weight: normal;
+ text-decoration: none;
+}
+/*/
+/// ...
+/// popdown content
+/*/
+/*/
+/// ...
+/// popdown
+/*/
+
+/*/
+/// ...
+/// header
+/*/
+
+/*/
+/// footer
+/// ...
+/*/
+.footer-logo {
+    width: 64px;
+    height: 64px;
+    margin: auto;
+    padding: 0px;
+    border: 0px;
+    border-style: solid;
+    border-spacing: 0px;
+    border-radius: 10px;
+    background-color: black;
+    color: lightgrey;
+    position: relative;
+}
+.footer-logo-icon { 
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 0px;
+    border: 0px;
+    border-style: solid;
+    border-color: lightgrey;
+    border-spacing: 0px;
+}
+.footer-logo-icon-image {
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    border: 0px;
+    border-style: solid;
+    border-color: lightgrey;
+    border-radius: 10px;
+    vertical-align: bottom;
+}
+.footer-logo-label { 
+    width: 100%;
+    padding: 0px;
+    border: 0px;
+    border-style: solid;
+    border-color: lightgrey;
+    border-spacing: 0px;
+}
+.footer-logo-label-text {
+    width: 100%;
+    padding: 0px;
+    border: 0px;
+    font-size: 7px;
+    font-weight: bolder;
+    text-align: center;
+    color: lightgrey;
+    background-color: black;
+    opacity: 0;
+    transition: .5s ease;                
+}
+.footer-logo:hover .footer-logo-label-text {
+    opacity: 1;
+}
+/*/
+/// ...
+/// footer
+/*/

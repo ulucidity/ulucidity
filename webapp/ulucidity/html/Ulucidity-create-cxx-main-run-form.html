@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+=====================================================================
+=== Copyright (c) 1988-2022 $organization$
+===
+=== This software is provided by the author and contributors ``as is'' 
+=== and any express or implied warranties, including, but not limited to, 
+=== the implied warranties of merchantability and fitness for a particular 
+=== purpose are disclaimed. In no event shall the author or contributors 
+=== be liable for any direct, indirect, incidental, special, exemplary, 
+=== or consequential damages (including, but not limited to, procurement 
+=== of substitute goods or services; loss of use, data, or profits; or 
+=== business interruption) however caused and on any theory of liability, 
+=== whether in contract, strict liability, or tort (including negligence 
+=== or otherwise) arising in any way out of the use of this software, 
+=== even if advised of the possibility of such damage.
+===
+===   File: Ulucidity-create-cxx-main-run-form.html
+===
+=== Author: $author$
+===   Date: 6/10/2022
+=====================================================================
+=== Application=Ulucidity Part=create-cxx-main-run-form
+-->
+
+<!--
+=====================================================================
+=== form
+=====================================================================
+-->
+<form name="Form" method="POST" action="/ulucidity/templates/t/cxx-main-run/cxx-main-run.cxx-main-run"
+ onSubmit="return setFormSubmit(getFormValue2('FormTemplate','FormAction','Form'),getFormValue('FormMethod','Form'),'Form')">
+    <div class="form">
+
+    File: <input name="File" value=""></input>[main][.hpp]
+    <input type="radio" name="Extension" value="hpp" checked="checked">.hpp</input>
+    <input type="radio" name="Extension" value="hxx" unchecked="checked">.hxx</input>
+    <input type="radio" name="Extension" value="h" unchecked="checked">.h</input>
+    <input type="radio" name="Extension" value="" unchecked="checked">no</input>
+    <input type="checkbox" name="is_File" value="no" unchecked="checked">no</input>
+    <br/>
+
+    Template: <select name="FormTemplate">
+    <option value="/ulucidity/templates/t/cxx/main-run-hxx.t">c++ main run .hxx (/ulucidity/templates/t/cxx/main-run-hxx.t)</option>
+    <option value=""></option>
+    <option value="/ulucidity/templates/t/t/parameters.t">t parameters &nbsp;&nbsp; (/ulucidity/templates/t/t/parameters.t)</option>
+    <option value="/ulucidity/templates/t/t/functions.t">t functions &nbsp;&nbsp; (/ulucidity/templates/t/t/functions.t)</option>
+    <option value=""></option>
+    <option value="/ulucidity-cgi/cgi">cgi parameters &nbsp;&nbsp; (/ulucidity-cgi/cgi)</option>
+    <option value="/ulucidity-cgi/cgicatch">catch cgi parameters &nbsp;&nbsp; (/ulucidity-cgi/cgicatch)</option>
+    <option value=""/>
+    </select>
+    <br/>
+
+    <br/>
+    <b>class </b><select name="Class">
+    <option value="main">main</option>
+    <option value="main_opt">main_opt</option>
+    <option value=""></option>
+    </select>[main]
+    <input type="checkbox" name="is_Class" value="no" unchecked="checked">no</input>
+    <b>...{</b>
+    <br/>
+    <b>...</b>
+    <br/>
+
+    <b>virtual </b><input name="ReturnType" value="int"/>
+    <input name="Which" value="this"/>
+    <input type="checkbox" name="is_Which" value="no" unchecked="checked">no</input>
+    <b>_</b><input name="Run" value="run"/>
+    <b>(derives::*_..._...)</b><input type="checkbox" name="is_Derives_run" value="no" checked="checked">no</input>
+    <input type="checkbox" name="is_Run" value="no" unchecked="checked">no</input>
+    <br/>
+
+    <b>(</b>Params: <input name="Params" value=""/>
+    <input type="checkbox" name="is_Params" value="no" unchecked="checked">no</input><b>, </b>
+    StdParams: <input name="StdParams" value="int argc, char_t** argv, char_t** env"/>
+    <input type="checkbox" name="is_StdParams" value="no" unchecked="checked">no</input><b>) {</b>
+    <br/>
+
+    %ReturnType% <input name="Return" value="err"/>
+    <b> = </b><input name="ReturnValue" value="0"/><b>;...</b><br/>
+    Args: <input name="Args" value=""/>
+    <input type="checkbox" name="is_Args" value="no" unchecked="checked">no</input><b>, </b>
+    StdArgs: <input name="StdArgs" value="argc, argv, env"/>
+    <input type="checkbox" name="is_StdArgs" value="no" unchecked="checked">no</input>
+    <br/>
+    <b>...}</b>
+    <br/>
+
+    <b>virtual </b><input name="SetReturnType" value="int"/>
+    <input name="Set" value="set"/>
+    <input type="checkbox" name="is_Set" value="no" unchecked="checked">no</input>
+    <input name="SetWhich" value=""/>
+    <input type="checkbox" name="is_SetWhich" value="no" unchecked="checked">no</input>
+    <b>_</b><input name="SetRun" value=""/>
+    <input type="checkbox" name="is_SetRun" value="no" unchecked="checked">no</input>
+    <br/>
+
+    <b>(</b>Params: <input name="SetParams" value=""/>
+    <input type="checkbox" name="is_SetParams" value="no" unchecked="checked">no</input><b>, </b>
+    StdParams: <input name="SetStdParams" value="int argc, char_t** argv, char_t** env"/>
+    <input type="checkbox" name="is_SetStdParams" value="no" unchecked="checked">no</input><b>) {</b>
+    <br/>
+
+    %ReturnType% <input name="SetReturn" value="err"/>
+    <b> = </b><input name="SetReturnValue" value="0"/><b>;</b>
+    <input type="checkbox" name="is_SetRun" value="no" unchecked="checked">no</input>
+    <input name="WhichSet" value=""/><b>_..._ = &amp;derives::..._...;</b>
+    <input type="checkbox" name="is_WhichSet" value="no" unchecked="checked">no</input>
+    <br/>
+    Args: <input name="SetArgs" value=""/>
+    <input type="checkbox" name="is_SetArgs" value="no" unchecked="checked">no</input><b>, </b>
+    StdArgs: <input name="SetStdArgs" value="argc, argv, env"/>
+    <input type="checkbox" name="is_SetStdArgs" value="no" unchecked="checked">no</input>
+    <br/>
+    <b>...}</b>
+    <br/>
+
+    <b>virtual ...</b>
+    <input name="Unset" value="unset"/>
+    <input type="checkbox" name="is_Unset" value="no" checked="checked">no</input>
+    <b>...(...) {</b>
+    <br/>
+    <b>...}</b>
+    <br/>
+
+    <b>...} /// class main...</b>
+    <br/>
+
+    <br/>
+    Copyright:<input name="Genesis" size="10" value=""/>[1988]<b></b>
+    <input type="checkbox" name="is_Genesis" value="no" unchecked="checked">no</input>
+    <b>-</b><input name="Year" size="10" value=""/>[%year()%]<b></b>
+    <input type="checkbox" name="is_Year" value="no" unchecked="checked">no</input>
+    <b>&nbsp;&nbsp;</b>Organization:<input name="Organization" value=""></input>[$organization$]
+    <input type="checkbox" name="is_Organization" value="no" unchecked="checked">no</input>
+    <input type="checkbox" name="is_Copyright" value="no" unchecked="checked">no</input>
+    <br/>
+    Author:<input name="Author" value=""></input>[$author$]
+    <input type="checkbox" name="is_Author" value="no" unchecked="checked">no</input>
+    <b>&nbsp;&nbsp;</b>Date:<input name="Date" size="10" value=""/>[%date()%]<b></b>
+    <input type="checkbox" name="is_Date" value="no" unchecked="checked">no</input>
+    <b>&nbsp;&nbsp;</b><select name="Claims">
+    <option value=""></option>
+    <option value="as_is">``as is''</option>
+    <option value=""></option>
+    </select>[``as is'']
+    <input type="checkbox" name="is_Claims" value="no" unchecked="checked">no</input>
+    <br/>
+
+    <br/>
+    Content-Type: <select name="content_type">
+    <option value="text/plain">text</option>
+    <option value="text/html">html</option>
+    <option value="text/xml">xml</option>
+    <option value="application/json">json</option>
+    <option value="application/javascript">javascript</option>
+    <option value=""></option>
+    </select>
+    <br/>
+    Action: <select name="FormAction">
+    <option value="/ulucidity/templates/t/cxx-main-run/cxx-main-run.cxx-main-run">.cxx-main-run main run (/ulucidity/templates/t/cxx-main-run/cxx-main-run.cxx-main-run)</option>
+    <option value=""></option>
+    <option value="/ulucidity/templates/t/t/parameters.t">t parameters &nbsp;&nbsp; (/ulucidity/templates/t/t/parameters.t)</option>
+    <option value="/ulucidity/templates/t/t/functions.t">t functions &nbsp;&nbsp; (/ulucidity/templates/t/t/functions.t)</option>
+    <option value=""></option>
+    <option value="/ulucidity-cgi/cgi">cgi parameters &nbsp;&nbsp; (/ulucidity-cgi/cgi)</option>
+    <option value="/ulucidity-cgi/cgicatch">catch cgi parameters &nbsp;&nbsp; (/ulucidity-cgi/cgicatch)</option>
+    <option value=""/>
+    </select>
+    <br/>
+    Method: <select name="FormMethod">
+    <option value="POST">POST</option>
+    <option value="GET">GET</option>
+    <option value=""></option>
+    </select>
+    <br/>
+    <br/>
+    <input type="submit" name="submit" value="submit"/><br/>
+    </div>
+</form>

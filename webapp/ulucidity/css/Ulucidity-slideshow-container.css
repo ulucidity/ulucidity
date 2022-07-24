@@ -1,0 +1,104 @@
+/*
+**********************************************************************
+** Copyright (c) 1988-2022 $organization$     
+**
+** This software is provided by the author and contributors ``as is'' 
+** and any express or implied warranties, including, but not limited to, 
+** the implied warranties of merchantability and fitness for a particular 
+** purpose are disclaimed. In no event shall the author or contributors 
+** be liable for any direct, indirect, incidental, special, exemplary, 
+** or consequential damages (including, but not limited to, procurement 
+** of substitute goods or services; loss of use, data, or profits; or 
+** business interruption) however caused and on any theory of liability, 
+** whether in contract, strict liability, or tort (including negligence 
+** or otherwise) arising in any way out of the use of this software, 
+** even if advised of the possibility of such damage.
+**
+**   File: Ulucidity-slideshow-container.css
+**
+** Author: $author$           
+**   Date: 6/5/2022
+**********************************************************************
+*/
+
+/*/
+/// slideshow
+/// ...
+/*/
+* {
+ box-sizing: border-box
+}
+.slideshow-container {
+  height: 75%;
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+.mySlides {
+  display: none;
+}
+.slide {
+  border-style: solid;
+  border-width: 20px;
+  border-radius: 10px;
+  border-color: grey;
+  vertical-align: middle;
+  height: 95%;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: darkgray;
+  background-color:black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 5px 5px 5px 5px;
+  user-select: none;
+}
+.next {
+  right: 0;
+}
+.prev:hover, .next:hover {
+  color: lightgray;
+  background-color:black;
+}
+.dots {
+ text-align:center;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: darkgray;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.activeDot, .dot:hover {
+  background-color:black;
+}
+.fadeSlides {
+  -webkit-animation-name: fadeSlides;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fadeSlides;
+  animation-duration: 1.5s;
+  text-align:center;
+}
+@-webkit-keyframes fadeSlides {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@keyframes fadeSlides {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+/*/
+/// ...
+/// slideshow
+/*/
