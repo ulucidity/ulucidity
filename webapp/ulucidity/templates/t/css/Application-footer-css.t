@@ -16,7 +16,7 @@
 %#   File: Application-footer-css.t
 %#
 %# Author: $author$
-%#   Date: 6/6/2022
+%#   Date: 9/9/2022
 %########################################################################
 %with(%
 %is_include_path,%(%else-then(%is_include_path%,%(%is_Include_path%)%)%)%,%
@@ -25,7 +25,9 @@
 %INCLUDE_PATH,%(%else-then(%INCLUDE_PATH%,%(%toupper(%Include_path%)%)%)%)%,%
 %include_path,%(%else-then(%_include_path%,%(%tolower(%Include_path%)%)%)%)%,%
 %is_application,%(%else-then(%is_application%,%(%is_Application%)%)%)%,%
-%application,%(%else-then(%if-no(%is_application%,,%(%application%)%)%,%(%if-no(%is_application%,,%(Ulucidity)%)%)%)%)%,%
+%application,%(%else-then(%if-no(%is_application%,,%(%application%)%)%,%(%if-no(%is_application%,,%(%
+%%else-then(%include(%Include_path%/../t/Application.t)%,%(Application)%)%%
+%)%)%)%)%)%,%
 %Application,%(%else-then(%if-no(%is_application%,,%(%Application%)%)%,%(%if-no(%is_application%,,%(%application%)%)%)%)%)%,%
 %APPLICATION,%(%else-then(%APPLICATION%,%(%toupper(%Application%)%)%)%)%,%
 %application,%(%else-then(%_application%,%(%tolower(%Application%)%)%)%)%,%
@@ -87,8 +89,50 @@
     border: 0px;
     border-style: solid;
     border-spacing: 0px 0px;
+    border-radius: 5px;
     background-color: black;
     position: relative;
+}
+.footer-logo-square {
+    width: 64px;
+    height: 64px;
+    margin: auto;
+    padding: 0px;
+    border: 0px;
+    border-style: solid;
+    border-spacing: 5px 5px;
+    background-color: black;
+    position: relative;
+}
+.footer-logo-frame { 
+    width: 100%%;
+    height: 100%%;
+    margin: auto;
+    padding: 0px;
+    border: 3px;
+    border-style: solid;
+    border-color: gray;
+    border-spacing: 0px 0px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.footer-logo-frame-label { 
+    width: 100%%;
+    padding: 0px;
+    border: 0px;
+    border-style: solid;
+    border-color: white;
+    border-spacing: 0px 0px;
+}
+.footer-logo-frame-label-text {
+    font-size: 7px;
+    font-weight: bolder;
+    text-align: center;
+    color: gray;
+    background-color: black;
+}
+.footer-logo-frame:hover .footer-logo-frame-label-text {
+    color: lightgray;
 }
 .footer-logo-icon { 
     width: 100%%;
@@ -102,14 +146,14 @@
     cursor: pointer;
 }
 .footer-logo-icon-image {
-    background-image: url('../images/jpeg/%Application%-logo.jpg');
+    background-image: url('../images/png/%Application%-logo.png');
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: 100%%;
     border: 0px;
     border-style: solid;
     border-color: white;
-    border-radius: 0px 0px 16px 20px;
+    border-radius: 16px 16px 16px 16px;
     vertical-align: bottom;
 }
 .footer-logo-label { 
@@ -122,7 +166,7 @@
 }
 .footer-logo-label-text {
     font-size: 7px;
-    font-weight: bold;
+    font-weight: bolder;
     text-align: center;
     color: lightgray;
     background-color: black;

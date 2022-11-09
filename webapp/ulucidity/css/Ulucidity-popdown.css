@@ -17,7 +17,7 @@
 **   File: Ulucidity-popdown.css
 **
 ** Author: $author$           
-**   Date: 6/6/2022
+**   Date: 6/6/2022, 9/9/2022
 **********************************************************************
 ** Application=Ulucidity Part=popdown
 */
@@ -30,10 +30,10 @@
      padding: 0px;
      border-spacing: 0px 0px;
      border-style: solid;
-     border-color: gray; /* %Form_bd_color% */
+     border-color: gray; 
      border-width: 1px 3px 3px 1px;
      border-radius: 5px 5px 5px 5px;
-     background-color: lightgray; /* %Form_hv_color% */
+     background-color: lightgray; 
      position: absolute;
      min-width: 160px;
      right: 0;
@@ -49,7 +49,7 @@
      display: block;
 }
 .popdown-content a:hover {
-     color: black; /* %Form_fg_color% */
+     color: black; 
      text-decoration: underline;
 }
 /*

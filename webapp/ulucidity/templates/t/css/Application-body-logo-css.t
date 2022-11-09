@@ -13,7 +13,7 @@
 %# or otherwise) arising in any way out of the use of this software, 
 %# even if advised of the possibility of such damage.
 %#
-%#   File: Application-dropdown-css.t
+%#   File: Application-body-logo-css.t
 %#
 %# Author: $author$
 %#   Date: 9/9/2022
@@ -32,12 +32,79 @@
 %APPLICATION,%(%else-then(%APPLICATION%,%(%toupper(%Application%)%)%)%)%,%
 %application,%(%else-then(%_application%,%(%tolower(%Application%)%)%)%)%,%
 %is_part,%(%else-then(%is_part%,%(%is_Part%)%)%)%,%
-%part,%(%else-then(%if-no(%is_part%,,%(%part%)%)%,%(%if-no(%is_part%,,%(dropdown)%)%)%)%)%,%
+%part,%(%else-then(%if-no(%is_part%,,%(%part%)%)%,%(%if-no(%is_part%,,%(body-logo)%)%)%)%)%,%
 %Part,%(%else-then(%if-no(%is_part%,,%(%Part%)%)%,%(%if-no(%is_part%,,%(%part%)%)%)%)%)%,%
 %PART,%(%else-then(%PART%,%(%toupper(%Part%)%)%)%)%,%
 %part,%(%else-then(%_part%,%(%tolower(%Part%)%)%)%)%,%
 %%(%
 %%include(%Include_path%/Application-part-css.t)%%
 %
+/*
+** .body-logo
+** ...
+*/
+.body-logo {
+    width: 100%%;
+    height: 100%%;
+    margin: auto;
+    padding: 0px 0px 0px 0px;
+    border-spacing: 0px 0px 0px 0px;
+    border: 0px;
+    border-style: solid;
+    border-color: white; 
+    background-color: black; 
+    position: absolute;
+    z-index: 0;
+}
+.body-logo-icon {
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    padding: 0px 0px 0px 0px;
+    border-spacing: 0px 0px 0px 0px;
+    border: 0px;
+    border-style: solid;
+    border-color: white; 
+    background-color: black;  
+    position: relative;
+    cursor: pointer;
+}
+.body-logo-icon-image { 
+    width: 400px;
+    height: 400px;
+    border: 0px;
+    border-style: solid;
+    border-color: white;
+    background-image: url('../images/png/%Application%-logo.png'); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 400px 400px;
+    border-radius: 70px;
+    vertical-align: bottom;
+}
+.body-logo-label {
+    width: 100%%;
+    padding: 0px 0px 0px 0px;
+    border-spacing: 0px 0px 0px 0px;
+    border: 0px;
+    border-style: solid;
+    border-color: white; 
+}
+.body-logo-label-text {
+    opacity: 0;
+    color: lightgray; 
+    background-color: black; 
+    transition: .5s ease;
+    font-size: 40px;
+    font-family: Arial;
+    text-align: center;
+ }
+.body-logo-icon:hover .body-logo-label-text {
+    opacity: .75;
+}
+/*
+** ...
+** .body-logo
+*/
 %
 %)%)%

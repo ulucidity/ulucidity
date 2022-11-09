@@ -13,17 +13,10 @@
 %# or otherwise) arising in any way out of the use of this software, 
 %# even if advised of the possibility of such damage.
 %#
-%#   File: js.t
+%#   File: Framework-depends.t
 %#
 %# Author: $author$
-%#   Date: 9/9/2022
+%#   Date: 9/10/2022
 %########################################################################
 %with(%
-%is_include_path,%(%else-then(%is_include_path%,%(%is_Include_path%)%)%)%,%
-%include_path,%(%else-then(%if-no(%is_include_path%,,%(%include_path%)%)%,%(%if-no(%is_include_path%,,%(%filepath(%input%)%)%)%)%)%)%,%
-%Include_path,%(%else-then(%if-no(%is_include_path%,,%(%Include_path%)%)%,%(%if-no(%is_include_path%,,%(%include_path%)%)%)%)%)%,%
-%INCLUDE_PATH,%(%else-then(%INCLUDE_PATH%,%(%toupper(%Include_path%)%)%)%)%,%
-%include_path,%(%else-then(%_include_path%,%(%tolower(%Include_path%)%)%)%)%,%
-%%(%
-%%include(%Include_path%/file-js.t)%%
-%)%)%
+%%(urostra;unadir;ufila;ucrono;ucifra;urete;ustara)%)%

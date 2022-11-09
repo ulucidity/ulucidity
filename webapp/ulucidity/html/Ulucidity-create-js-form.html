@@ -15,12 +15,12 @@
 === or otherwise) arising in any way out of the use of this software, 
 === even if advised of the possibility of such damage.
 ===
-===   File: Ulucidity-create-t-form.html
+===   File: Ulucidity-create-js-form.html
 ===
 === Author: $author$
-===   Date: 6/7/2022
+===   Date: 9/9/2022
 =====================================================================
-=== Application=Ulucidity Part=create-t-form
+=== Application=Ulucidity Part=create-js-form
 -->
 
 <!--
@@ -28,63 +28,40 @@
 === form
 =====================================================================
 -->
-<form name="Form" method="POST" action="/ulucidity/templates/t/t/t.t"
+<form name="Form" method="POST" action="/ulucidity/templates/t/js/js.t"
  onSubmit="return setFormSubmit(getFormValue2('FormTemplate','FormAction','Form'),getFormValue('FormMethod','Form'),'Form')">
     <div class="form">
 
-    File: <input name="File" value=""></input>[t][.t]
-    <input type="radio" name="Extension" value="texta" unchecked="checked">.texta</input>
-    <input type="radio" name="Extension" value="t" checked="checked">.t</input>
-    <input type="radio" name="Extension" value="" unchecked="checked">no</input>
+    File: <input name="File" value=""></input>[js][.t]
+    <input type="radio" name="Extension" value="js" unchecked="checked">.js</input>
+    <input type="radio" name="Extension" value="" checked="checked">no</input>
     <input type="checkbox" name="is_File" value="no" unchecked="checked">no</input>
     <br/>
+
     Template: <select name="FormTemplate">
-    <option value="/ulucidity/templates/t/t/t.t">.t file (/ulucidity/templates/t/t/t.t)</option>
-    <option value="/ulucidity/templates/t/t/file-parameters-t.t">.t file parameters (/ulucidity/templates/t/t/file-parameters-t.t)</option>
+    <option value="/ulucidity/templates/t/js/Application-js.t">Application .js file (/ulucidity/templates/t/js/Application-js.t)</option>
+    <option value=""></option>
+    <option value="/ulucidity/templates/t/js/Application-include-js.t">Application include .js file (/ulucidity/templates/t/js/Application-include-js.t)</option>
+    <option value="/ulucidity/templates/t/js/Application-form-js.t">Application form .js file (/ulucidity/templates/t/js/Application-form-js.t)</option>
+    <option value="/ulucidity/templates/t/js/Application-popdown-js.t">Application popdown .js file (/ulucidity/templates/t/js/Application-popdown-js.t)</option>
+    <option value="/ulucidity/templates/t/js/Application-dropdown-js.t">Application dropdown .js file (/ulucidity/templates/t/js/Application-dropdown-js.t)</option>
+    <option value="/ulucidity/templates/t/js/Application-location-js.t">Application location .js file (/ulucidity/templates/t/js/Application-location-js.t)</option>
+    <option value="/ulucidity/templates/t/js/Application-window-js.t">Application window .js file (/ulucidity/templates/t/js/Application-window-js.t)</option>
+    <option value=""></option>
+    <option value="/ulucidity/templates/t/js/js.t">.js file (/ulucidity/templates/t/js/js.t)</option>
     <option value=""></option>
     <option value="/ulucidity/templates/t/t/parameters.t">t parameters &nbsp;&nbsp; (/ulucidity/templates/t/t/parameters.t)</option>
     <option value="/ulucidity/templates/t/t/functions.t">t functions &nbsp;&nbsp; (/ulucidity/templates/t/t/functions.t)</option>
     <option value=""></option>
-    <option value="/vmachinae-cgi/cgi">cgi parameters &nbsp;&nbsp; (/vmachinae-cgi/cgi)</option>
-    <option value="/vmachinae-cgi/cgicatch">catch cgi parameters &nbsp;&nbsp; (/vmachinae-cgi/cgicatch)</option>
-    <option value=""/>
-    <option value=""></option>
-    <option value="/ulucidity/application/templates/t/t/t.t">application .t file (/ulucidity/application/templates/t/t/t.t)</option>
-    <option value="/ulucidity/application/templates/t/t/file-parameters-t.t">application .t file parameters (/ulucidity/application/templates/t/t/file-parameters-t.t)</option>
-    <option value=""></option>
-    <option value="/ulucidity/application/templates/t/t/parameters.t">application t parameters &nbsp;&nbsp; (/ulucidity/application/templates/t/t/parameters.t)</option>
-    <option value="/ulucidity/application/templates/t/t/functions.t">application t functions &nbsp;&nbsp; (/ulucidity/application/templates/t/t/functions.t)</option>
+    <option value="/ulucidity-cgi/cgi">cgi parameters &nbsp;&nbsp; (/ulucidity-cgi/cgi)</option>
+    <option value="/ulucidity-cgi/cgicatch">catch cgi parameters &nbsp;&nbsp; (/ulucidity-cgi/cgicatch)</option>
     <option value=""/>
     </select>
     <br/>
 
     <br/>
-    Include: <input name="Include" value="file-t.t"></input>
-    <input type="radio" name="Include_extension" value="texta" unchecked="checked">.texta</input>
-    <input type="radio" name="Include_extension" value="t" checked="checked">.t</input>
-    <input type="radio" name="Include_extension" value="" unchecked="checked">no</input>
-    <input type="checkbox" name="is_Include" value="no" checked="checked">no</input>
-    <br/>
-    Parameters: <input name="Parameters" value=""></input>
-    = no<input type="checkbox" name="is_No" value="no" checked="checked">no</input>
-    lower<input type="checkbox" name="is_Lower" value="no" unchecked="checked">no</input>
-    upper/lower<input type="checkbox" name="is_UpperLower" value="no" unchecked="checked">no</input>
-    <input type="checkbox" name="is_Parameters" value="no" unchecked="checked">no</input>
-    <br/>
-    Type: <select name="TypeExtension">
-    <option value=""></option>
-    <option value="texta">.texta</option>
-    <option value="t" selected="selected">.t</option>
-    <option value=""></option>
-    <option value="xslt">.xslt</option>
-    <option value="xml">.xml</option>
-    <option value=""></option>
-    <option value="html">.html</option>
-    <option value="css">.css</option>
-    <option value="js">.js</option>
-    <option value=""></option>
-    </select>
-    <input type="checkbox" name="is_TypeExtension" value="no" unchecked="checked">no</input>
+    Application: <input name="Application" value=""></input>[Ulucidity]
+    <input type="checkbox" name="is_Application" value="no" unchecked="checked">no</input>
     <br/>
 
     <br/>
@@ -119,7 +96,7 @@
     </select>
     <br/>
     Action: <select name="FormAction">
-    <option value="/ulucidity/templates/t/t/t.t">.t file (/ulucidity/templates/t/t/t.t)</option>
+    <option value="/ulucidity/templates/t/js/js.t">.js .js file (/ulucidity/templates/t/js/js.t)</option>
     <option value=""></option>
     <option value="/ulucidity/templates/t/t/parameters.t">t parameters &nbsp;&nbsp; (/ulucidity/templates/t/t/parameters.t)</option>
     <option value="/ulucidity/templates/t/t/functions.t">t functions &nbsp;&nbsp; (/ulucidity/templates/t/t/functions.t)</option>

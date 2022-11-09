@@ -17,7 +17,7 @@
 **   File: Ulucidity-body-logo.css
 **
 ** Author: $author$           
-**   Date: 6/6/2022
+**   Date: 6/6/2022, 9/9/2022
 **********************************************************************
 ** Application=Ulucidity Part=body-logo
 */
@@ -34,8 +34,8 @@
     border-spacing: 0px 0px 0px 0px;
     border: 0px;
     border-style: solid;
-    border-color: white;
-    background-color: black;
+    border-color: white; 
+    background-color: black; 
     position: absolute;
     z-index: 0;
 }
@@ -47,8 +47,8 @@
     border-spacing: 0px 0px 0px 0px;
     border: 0px;
     border-style: solid;
-    border-color: white;
-    background-color: black;
+    border-color: white; 
+    background-color: black;  
     position: relative;
     cursor: pointer;
 }
@@ -71,12 +71,12 @@
     border-spacing: 0px 0px 0px 0px;
     border: 0px;
     border-style: solid;
-    border-color: white;
+    border-color: white; 
 }
 .body-logo-label-text {
     opacity: 0;
-    color: lightgray;
-    background-color: black;
+    color: lightgray; 
+    background-color: black; 
     transition: .5s ease;
     font-size: 40px;
     font-family: Arial;

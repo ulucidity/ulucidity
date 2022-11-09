@@ -16,7 +16,7 @@
 %#   File: Application-file-css.t
 %#
 %# Author: $author$
-%#   Date: 6/6/2022
+%#   Date: 9/9/2022
 %########################################################################
 %with(%
 %is_include_path,%(%else-then(%is_include_path%,%(%is_Include_path%)%)%)%,%
@@ -25,7 +25,9 @@
 %INCLUDE_PATH,%(%else-then(%INCLUDE_PATH%,%(%toupper(%Include_path%)%)%)%)%,%
 %include_path,%(%else-then(%_include_path%,%(%tolower(%Include_path%)%)%)%)%,%
 %is_application,%(%else-then(%is_application%,%(%is_Application%)%)%)%,%
-%application,%(%else-then(%if-no(%is_application%,,%(%application%)%)%,%(%if-no(%is_application%,,%(Ulucidity)%)%)%)%)%,%
+%application,%(%else-then(%if-no(%is_application%,,%(%application%)%)%,%(%if-no(%is_application%,,%(%
+%%else-then(%include(%Include_path%/../t/Application.t)%,%(Application)%)%%
+%)%)%)%)%)%,%
 %Application,%(%else-then(%if-no(%is_application%,,%(%Application%)%)%,%(%if-no(%is_application%,,%(%application%)%)%)%)%)%,%
 %APPLICATION,%(%else-then(%APPLICATION%,%(%toupper(%Application%)%)%)%)%,%
 %application,%(%else-then(%_application%,%(%tolower(%Application%)%)%)%)%,%
